@@ -1,11 +1,12 @@
 import express from "express";
 import bodyParser from "body-parser";
+import cors from "cors"
 import axios from "axios";
 import mongoose, { model } from "mongoose"
 
 const app = express();
 const port = 3000;
-const API_URL = "http://localhost:5000";
+const API_URL = "https://blogging-websiteapi.vercel.app";
 
 app.use(express.static("public"));
 app.use(cors(
