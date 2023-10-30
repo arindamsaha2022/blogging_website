@@ -3,7 +3,13 @@ import bodyParser from "body-parser";
 
 const app = express();
 const port = process.env.PORT || 5000;
-
+app.use(cors(
+  {
+    origin:"url",
+    methods:["POST", "GET"],
+    Credential: true
+  }
+))
 // In-memory data store
 let posts = [
   {
