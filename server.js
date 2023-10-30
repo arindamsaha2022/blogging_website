@@ -8,12 +8,18 @@ const port = 3000;
 const API_URL = "http://localhost:5000";
 
 app.use(express.static("public"));
-
+app.use(cors(
+  {
+    origin:"url",
+    methods:["POST", "GET"],
+    Credential: true
+  }
+))
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //adding database 
-mongoose.connect("mongodb://0.0.0.0:27017/bloogsDB",{useNewUrlParser: true})
+mongoose.connect("mongodb+srv://arindamsahaa2002:tnfLSCRnZyjSXB1t@cluster0.6b04oec.mongodb.net/?retryWrites=true&w=majority",{useNewUrlParser: true})
 
 const bloogSchema = {
   id: Number,
