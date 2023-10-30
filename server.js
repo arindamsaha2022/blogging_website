@@ -9,13 +9,13 @@ const port = 3000;
 const API_URL = "https://blogging-websiteapi.vercel.app";
 
 app.use(express.static("public"));
-app.use(cors(
-  {
-    origin:"url",
-    methods:["POST", "GET"],
-    Credential: true
-  }
-))
+// app.use(cors(
+//   {
+//     origin:"url",
+//     methods:["POST", "GET"],
+//     Credential: true
+//   }
+// ))
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
